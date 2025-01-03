@@ -1,4 +1,5 @@
 # Zircon Assessment
+---
 
 ## Table of Content
 
@@ -7,6 +8,7 @@
 - [Dataset Description](#Dataset-Description)
 
 ## Project Description
+---
 You are hired by a company Gem Stones co ltd, which is a cubic zirconia manufacturer. You are provided with the dataset containing the prices and other attributes of almost 27,000 cubic zirconia (an inexpensive diamond alternative with many of the same qualities as a diamond). The company is earning different profits on different prize slots. You have to help the company in predicting the price for the stone based on the details given in the dataset so it can distinguish between higher profitable stones and lower profitable stones to have a better profit share. 
 ## Objective
 This project aims to perform exploratory data analysis (EDA), data wrangling, and building a regression model to predict gemstone prices based on features such as carat, cut, color, and clarity.
@@ -49,3 +51,13 @@ Refer to “Gemstone_Dataset_Dictionary” document file.
   - R² score
 - Explore how model performance changes with different features or transformations.
 - Summarize findings and assess the model's effectiveness in predicting gemstone prices.
+
+🙂
+
+💻
+|Heading1|Heading2|
+|--------|--------|
+|Content|Content2|
+|Python|SQL|
+
+`column_1`
