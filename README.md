@@ -1,4 +1,4 @@
-# Zircon Assessment
+# Gemstone Price Prediction
 ---
 
 ## Table of Content
@@ -15,17 +15,16 @@ This dataset contains the price and other attributes of nearly 27,000 cubic zirc
 This project aims to perform exploratory data analysis (EDA), data wrangling, and building a regression model to predict gemstone prices based on features such as carat, cut, color, and clarity.
 ## Dataset Description
 The dataset contains data about cubic zirconia gemstone, including various features that influence its price. The task is explore, clean, and analyze the data, draw meaningful insights, and create predictive models.
-## Dataset Explanation
-### **Metadata**
-1.  Carat : 	 Carat weight of the cubic zirconia.
+## Dataset Explanation, **Metadata**
+1.  Carat : Carat weight of the cubic zirconia.
 2. Cut :	 Describe the cut quality of the cubic zirconia. Quality is increasing order:
     *  2.1 Fair
     *  2.2 Good
     *  2.3 Very Good
     *  2.4 Premium
     *  2.5 Ideal
-3. Color :  	 Color of the cubic zirconia with D being the best and J the worst.
-4. Clarity :	 cubic zirconia Clarity refers to the absence of the Inclusions and Blemishes. from Best to Worst:
+3. Color : Color of the cubic zirconia with D being the best and J the worst.
+4. Clarity : Cubic zirconia Clarity refers to the absence of the Inclusions and Blemishes. from Best to Worst:
     * FL: Flawless
     * IF: Internally Flawless
     * VVS1: Very, Very Slightly Included 1
@@ -44,49 +43,60 @@ The dataset contains data about cubic zirconia gemstone, including various featu
 9. Width(mm) :	Width of the cubic zirconia in mm.
 10. Height(mm) : Height of the cubic zirconia in mm.
 
-
 ## Notebook prepration
 **1- Import libraries and dataset**
-## Tasks
+
+## preproccessing
 
 1.	Data Cleaning:
-- Handle missing values.
 - Remove duplicate entries.
+- Handle missing values.
 - Correct inconsistencies in the data.
 - Detect and handle outliers.
 
 2.	Exploratory Data Analysis (EDA):
 - Generate summary statistics for the dataset.
 - Visualize the distribution of each feature.
-- Explore relationships between features using scatter plots, correlation matrices, etc.
+- Explore relationships between features using scatter plots, correlation matrices(Heatmap), etc.
 - Identify any patterns or trends in the data.
 
 3.	Data Wrangling:
-- Normalize or standardize numerical features if necessary.
+- Normalize target.
 - Encode categorical variables.
-- Create new features if beneficial for the analysis.
 
-4.	Insights and Conclusions:
-- Draw meaningful insights from the data.
-- Summarize critical findings.
-- Provide recommendations based on the analysis.
-
-5.	Building a Regression Model:
+4.	Building a Linear Regression Model:
 - Use the cleaned and preprocessed dataset to build a regression model predicting gemstone prices.
 - Split the dataset into training and testing sets.
 - Train the model and evaluate its performance using:
   - Root Mean Squared Error (RMSE)
   - Mean Absolute Error (MAE)
   - R² score
-- Explore how model performance changes with different features or transformations.
-- Summarize findings and assess the model's effectiveness in predicting gemstone prices.
+  - Explore how model performance changes with different features or transformations using Cross Validation.
+  - Tuning the model by GridSearchCV
+  - Summarize findings and assess the model's effectiveness in predicting gemstone prices.
+  
+5.	Insights and Conclusions:
+- Draw meaningful insights from the data.
+- Summarize critical findings.
+- Provide recommendations based on the analysis.
+
+
+|Training set||Mean Average Error(MAE)|Mean Square Error(MSE)|Root Mean Square Error(RMSE)|R²|
+|-----|--------|-------|--------- |------|---|
+||Baseline Modeling|0.12|0.03|0.18|0.97||
+||Cross Validation|  |  |     |  |
+|          |GridSearchCV(Lasso)     |  0.15     |          |   0.20   | 0.96  | 
+|          |GridSearchCV(Ridge)     |  0.12     |          |   0.18   | 0.97  | 
+
+
+|Testing set||Mean Average Error(MAE)|Mean Square Error(MSE)|Root Mean Square Error(RMSE)|R²|
+|----------|-----------------|-------|--------- |------|---|
+|          |Baseline Modeling| 0.12      |  0.08        |   0.22   |  0.95 |   
+|          |Cross Validation |       |          |      | 0.96  |
+|          |GridSearchCV(Lasso)     |  0.15     |          |   0.25   | 0.94  | 
+|          |GridSearchCV(Ridge)     |  0.13     |          |   0.22   | 0.95  |  
+
 
 🙂
 
 💻
-|Heading1|Heading2|
-|--------|--------|
-|Content|Content2|
-|Python|SQL|
-
-`column_1`
