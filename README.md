@@ -6,6 +6,15 @@
 - [Project Description](#Project-Description)
 - [Objective](#Objective)
 - [Dataset Description](#Dataset-Description)
+- [preproccessing](#preproccessing)
+- [Exploratory Data Analysis (EDA)](#Exploratory Data Analysis(EDA))
+- [Data Wrangling](#Data Wrangling)
+- [Building a Linear Regression Model](#Buliding a linear Regression Model)
+- [Insights and Conclusion](#Insights and Conclusion)
+- [The result for baseline model, Cross validation and GridSearchCV](# The result for baseline model, cross validation and GridSearchCV)
+- [Conclusion](#Conclusion)
+- [Recommendation](#Recommendation)
+
 
 ## Project Description
 ---
@@ -48,23 +57,23 @@ The dataset contains data about cubic zirconia gemstone, including various featu
 
 ## preproccessing
 
-1.	Data Cleaning:
+### Data Cleaning:
 - Remove duplicate entries.
 - Handle missing values.
 - Correct inconsistencies in the data.
 - Detect and handle outliers.
 
-2.	Exploratory Data Analysis (EDA):
+## Exploratory Data Analysis (EDA):
 - Generate summary statistics for the dataset.
 - Visualize the distribution of each feature.
 - Explore relationships between features using scatter plots, correlation matrices(Heatmap), etc.
 - Identify any patterns or trends in the data.
 
-3.	Data Wrangling:
+## Data Wrangling:
 - Normalize target.
 - Encode categorical variables.
 
-4.	Building a Linear Regression Model:
+## Building a Linear Regression Model:
 - Use the cleaned and preprocessed dataset to build a regression model predicting gemstone prices.
 - Split the dataset into training and testing sets.
 - Train the model and evaluate its performance using:
@@ -75,11 +84,12 @@ The dataset contains data about cubic zirconia gemstone, including various featu
   - Tuning the model by GridSearchCV
   - Summarize findings and assess the model's effectiveness in predicting gemstone prices.
   
-5.	Insights and Conclusions:
+  ## Insights and Conclusions:
 - Draw meaningful insights from the data.
 - Summarize critical findings.
 - Provide recommendations based on the analysis.
 
+## The result for baseline model, Cross validation and GridSearchCV
 
 |Training set||Mean Average Error(MAE)|Mean Square Error(MSE)|Root Mean Square Error(RMSE)|R²|
 |-----|--------|-------|--------- |------|---|
@@ -96,7 +106,12 @@ The dataset contains data about cubic zirconia gemstone, including various featu
 |          |GridSearchCV(Lasso)     |  0.15     |          |   0.25   | 0.94  | 
 |          |GridSearchCV(Ridge)     |  0.13     |          |   0.22   | 0.95  |  
 
+## Conclusion
+ - Models predictions for baseline modeling and GridSearchCV method Ridge are same 95% and almost the same with Lasso method of GridSearchCV 94%.
+ - Carat, Hiegth, Weigth, Length and Cut, Color and Clarity have impact to raise the Zircon gemstone price. 
 
+## Recommendation
+- Gemstone Co. Ltd. can achieve higher profits by focusing on the Carat, Length, Height, and Width measurements, as well as the Cut, Color, and Clarity of the Zircon stones, to standardize pricing and make it more competitive in the market.
+  
 🙂
-
 💻
