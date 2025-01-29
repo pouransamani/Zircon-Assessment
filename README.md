@@ -55,6 +55,22 @@ The dataset contains data about cubic zirconia gemstone, including various featu
 
 ## Notebook prepration
 **1- Import libraries and dataset**
+#import needed pakages and libraries
+import numpy as np
+import pandas as pd
+import matplotlib as mpl
+import matplotlib.pyplot as plt
+import seaborn as sns
+plt.style.use('fivethirtyeight')
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LinearRegression
+from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
+from scipy import stats
+from sklearn.linear_model import Lasso, Ridge
+from sklearn.model_selection import GridSearchCV
+from sklearn.model_selection import cross_val_score
+import warnings
+warnings.filterwarnings('ignore')
 
 ## preproccessing
 
